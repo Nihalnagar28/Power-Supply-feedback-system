@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin dashboard for managing power supply complaints.">
+    <title>Admin Dashboard — Power Supply Feedback System</title>
+    <link rel="stylesheet" href="../public/css/app.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <span class="brand-icon">⚡</span>
+                Power Supply
+            </a>
+            <button class="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feedback.html">Submit Feedback</a></li>
+                <li><a href="complaints.html">Complaints</a></li>
+                <li><a href="admin-login.html" class="active">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-wrapper">
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Admin Dashboard</h2>
+                    <p>Manage and update complaint statuses</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">9</div>
+                        <div class="stat-label">Total Complaints</div>
+                    </div>
+                    <div class="stat-card stat-pending">
+                        <div class="stat-value">6</div>
+                        <div class="stat-label">Pending</div>
+                    </div>
+                    <div class="stat-card stat-resolved">
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">Resolved</div>
+                    </div>
+                </div>
+
+                <!-- Complaints Management -->
+                <div class="card-grid">
+
+                    <!-- Card 1 -->
+                    <div class="card admin-complaint-card">
+                        <div class="card-header">
+                            <span class="card-location">Sector 12, Noida</span>
+                            <span class="card-type">Power Cut</span>
+                        </div>
+                        <p class="text-muted mb-1" style="font-size:0.85rem;">By: Rajesh Kumar</p>
+                        <p class="card-desc">Frequent power cuts lasting 2-3 hours during peak evening hours. This has been happening for the past week.</p>
+                        <div class="card-footer">
+                            <span class="badge badge-pending">Pending</span>
+                            <span class="card-date">18 Apr 2026</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-success btn-sm btn-toggle-status">✓ Mark Resolved</button>
+                            <button class="btn btn-danger btn-sm btn-delete">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card admin-complaint-card">
+                        <div class="card-header">
+                            <span class="card-location">MG Road, Lucknow</span>
+                            <span class="card-type">Voltage Issue</span>
+                        </div>
+                        <p class="text-muted mb-1" style="font-size:0.85rem;">By: Priya Sharma</p>
+                        <p class="card-desc">Low voltage throughout the day causing appliances to malfunction. Multiple households affected.</p>
+                        <div class="card-footer">
+                            <span class="badge badge-resolved">Resolved</span>
+                            <span class="card-date">16 Apr 2026</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-outline btn-sm btn-toggle-status">↩ Mark Pending</button>
+                            <button class="btn btn-danger btn-sm btn-delete">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card admin-complaint-card">
+                        <div class="card-header">
+                            <span class="card-location">Civil Lines, Allahabad</span>
+                            <span class="card-type">Frequent Outage</span>
+                        </div>
+                        <p class="card-desc">Power goes off 5-6 times a day without any prior notice. School and hospital areas severely impacted.</p>
+                        <div class="card-footer">
+                            <span class="badge badge-pending">Pending</span>
+                            <span class="card-date">15 Apr 2026</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-success btn-sm btn-toggle-status">✓ Mark Resolved</button>
+                            <button class="btn btn-danger btn-sm btn-delete">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card admin-complaint-card">
+                        <div class="card-header">
+                            <span class="card-location">Gomti Nagar, Lucknow</span>
+                            <span class="card-type">Power Cut</span>
+                        </div>
+                        <p class="text-muted mb-1" style="font-size:0.85rem;">By: Arjun Singh</p>
+                        <p class="card-desc">Unscheduled power cut for over 8 hours. No update from the electricity board. Major inconvenience.</p>
+                        <div class="card-footer">
+                            <span class="badge badge-pending">Pending</span>
+                            <span class="card-date">14 Apr 2026</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-success btn-sm btn-toggle-status">✓ Mark Resolved</button>
+                            <button class="btn btn-danger btn-sm btn-delete">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="card admin-complaint-card">
+                        <div class="card-header">
+                            <span class="card-location">Aliganj, Lucknow</span>
+                            <span class="card-type">Voltage Issue</span>
+                        </div>
+                        <p class="text-muted mb-1" style="font-size:0.85rem;">By: Meera Patel</p>
+                        <p class="card-desc">Voltage fluctuation during morning hours. Refrigerators and ACs getting damaged due to sudden surges.</p>
+                        <div class="card-footer">
+                            <span class="badge badge-resolved">Resolved</span>
+                            <span class="card-date">12 Apr 2026</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-outline btn-sm btn-toggle-status">↩ Mark Pending</button>
+                            <button class="btn btn-danger btn-sm btn-delete">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="card admin-complaint-card">
+                        <div class="card-header">
+                            <span class="card-location">Rajajipuram, Lucknow</span>
+                            <span class="card-type">Frequent Outage</span>
+                        </div>
+                        <p class="card-desc">Daily outages from 1 PM to 4 PM. Area transformer seems overloaded. Needs immediate attention.</p>
+                        <div class="card-footer">
+                            <span class="badge badge-pending">Pending</span>
+                            <span class="card-date">10 Apr 2026</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-success btn-sm btn-toggle-status">✓ Mark Resolved</button>
+                            <button class="btn btn-danger btn-sm btn-delete">Delete</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            &copy; 2026 Power Supply Feedback System. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="../public/js/app.js"></script>
+</body>
+</html>

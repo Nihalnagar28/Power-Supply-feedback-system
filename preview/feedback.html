@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit feedback about electricity supply issues in your area.">
+    <title>Submit Feedback — Power Supply Feedback System</title>
+    <link rel="stylesheet" href="../public/css/app.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <span class="brand-icon">⚡</span>
+                Power Supply
+            </a>
+            <button class="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feedback.html" class="active">Submit Feedback</a></li>
+                <li><a href="complaints.html">Complaints</a></li>
+                <li><a href="admin-login.html">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-wrapper">
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Submit Your Feedback</h2>
+                    <p>Let us know about electricity supply issues in your area</p>
+                </div>
+
+                <div class="card form-card">
+                    <form id="feedbackForm">
+
+                        <div class="form-group">
+                            <label class="form-label">Name <span class="optional">(optional)</span></label>
+                            <input type="text" name="name" class="form-control" placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Location <span style="color:#EF4444">*</span></label>
+                            <input type="text" name="location" class="form-control" placeholder="e.g., Sector 12, Noida" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Issue Type <span style="color:#EF4444">*</span></label>
+                            <select name="issue_type" class="form-control" required>
+                                <option value="" disabled selected>Select issue type</option>
+                                <option value="Power Cut">Power Cut</option>
+                                <option value="Voltage Issue">Voltage Issue</option>
+                                <option value="Frequent Outage">Frequent Outage</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Description <span style="color:#EF4444">*</span></label>
+                            <textarea name="description" class="form-control" placeholder="Describe the issue in detail..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            &copy; 2026 Power Supply Feedback System. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="../public/js/app.js"></script>
+</body>
+</html>
